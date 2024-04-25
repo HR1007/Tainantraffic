@@ -1,0 +1,198 @@
+.title_flex{
+    display: flex;
+    border-radius: 10px;
+    justify-content: flex-end; /* 将按钮容器右对齐 */
+   
+}
+
+@keyframes title_animation {
+    0%{
+        transform: translateY(-40px);
+        opacity: 0;
+    } 
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }    
+}
+@keyframes title_pic_animation {
+    0%{
+        transform: translateX(40px);
+        opacity: 0;
+    } 
+    100%{
+        transform: translatex(0px);
+        opacity: 1;
+    }    
+}
+@keyframes pic_animation {
+    0%{transform: translateX(-40px);
+        opacity: 0;
+    }
+    100%{transform:translateX(0) ;
+    }
+    /*@keyframes 動畫腳本的意思 後面要加上腳本名稱(自訂)
+    0% 在最一開始呈現的內容
+    transform 變形
+    perspective 透視
+    scale 縮放*/   
+}
+@keyframes pic_right_animation {
+    0%{transform: translateX(40px);
+        opacity: 0;
+    }
+    100%{transform:translateX(0) ;
+    }
+    /*@keyframes 動畫腳本的意思 後面要加上腳本名稱(自訂)
+    0% 在最一開始呈現的內容
+    transform 變形
+    perspective 透視
+    scale 縮放*/   
+}
+.title_name_left{ 
+    display: flex;
+    width: 600px;
+    height: 50px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align:left;
+    margin: 10px;
+    margin-right: auto;
+    animation: title_animation 1s;
+}
+
+.title_name{
+    width: 180px;
+    height: 40px;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    margin: 10px;
+    padding: 10px; 
+    border-radius: 5px; 
+    cursor: pointer;
+    border-radius: 10px; /* 圓角 */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* 陰影 */
+    padding: 10px; 
+    cursor: pointer;
+    animation: title_animation 3s;
+}
+
+.icon{
+    display: flex;
+    padding-right: 5px; 
+}
+
+.body_street_img {
+    background:url("street.jpg");
+    background-position: center;
+    position: relative;
+    background-size: cover;
+    background-size:2150px 900px ; /* 將寬度設定為 1280px，高度自動調整 */
+    width: 100%; /* 確保容器寬度填滿父元素 */
+    height: 600px; /* 設定容器的高度 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 陰影 */
+}
+
+/*第一層放置在圖片上方的文字 */
+.text_overlay{
+    color:aliceblue;
+    position: absolute;
+    left: 10px;
+    font-size: 280px;
+    font-weight:bold;
+    z-index: 1;
+    animation: title_pic_animation 2s;
+}
+
+.body_motivation_flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}   
+
+.motivation_left_img{
+    position: relative;/* 設置父元素為相對定位 */
+    margin-top: 20px;
+    margin-left: 50px;
+    background: url("text.png");
+    background-size: 820px 300px; 
+    background-repeat: no-repeat;
+    width: 820px;
+    height:400px; /* 設定容器的高度 */
+
+}
+
+
+.motivation_text{
+    font-size: 16px;
+    width: 650px;
+    height: 300px;
+    margin: 100px;
+    margin-top: 60px;
+    text-align: left;
+    flex: 0 0 calc(50%-20px);/* 考慮到兩側的 margin，-20px 是兩側 margin 的總和 */
+    z-index: 1;
+    animation: pic_text_animation 2s;
+}
+
+.motivation_right_img{
+    position: relative;/* 設置父元素為相對定位 */
+    margin-top: 10px;
+    background: url("street2.jpg");/* 背景圖片路徑 */
+    width: 600px;
+    height:400px; /* 設定容器的高度 *
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 陰影 */
+    animation: pic_right_animation 2s;
+}
+
+.motivation_text_overlay{
+    position: absolute;
+    color: aliceblue;
+    left: 10px;
+    font-size: 170px;
+    font-weight:bold;
+    z-index: 1;
+    animation: title_animation 1s;
+}
+
+.data_pic_flex{
+    display: flex;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    justify-content: center; /* 水平置中 */
+    align-items: center; /* 垂直置中 */
+}
+
+.pic_container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.content-block{
+    justify-content: center;
+    align-items: center;
+    animation: pic_animation 3s;
+}
+
+.pic_motivation_text{
+    font-size: 25px;
+    margin: 50px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/*.data_pic_group{
+    display: none;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+    margin-bottom: 20px;
+}*/
+
+/*.img{
+    width: 680px; 
+    height: auto;
+    margin-inline: 50px;
+}*/

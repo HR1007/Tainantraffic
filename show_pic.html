@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<HTML>
+    <head>
+        <meta charset="utf-8">
+        <meta name ="viewport" content="width=device-width, width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="show_pic.css">
+        <title>台南市交通事故視覺化</title>
+
+        <div class="title_flex">
+              <div class="title_name_left" onclick="ShowContent('main-content')">
+                <img src="analysis.png" >台南市交通事故視覺化分析</div>
+                
+              <div class="title_name" 
+                onclick="ShowContent('weather-content')"
+                onmouseover="over(this);"onmouseout="out(this);"
+                onmousedown="down(this);"onmouseup="up(this);">
+              <img src="sun.png" width="30" height="30"> 天氣因素分析</div>
+
+              <div class="title_name" 
+                onclick="ShowContent('place-content')"
+                onmouseover="over(this);"onmouseout="out(this);"
+                onmousedown="down(this);"onmouseup="up(this);">
+              <img src="local-two.png" width="30" height="30" >地理類型分析</div>
+
+              <div class="title_name" 
+                onclick="ShowContent('speed-content')"
+                onmouseover="over(this);"onmouseout="out(this);"
+                onmousedown="down(this);"onmouseup="up(this);">
+              <img src="speed-one.png" width="30" height="30"> 限速關聯分析</div>
+
+              <div class="title_name" 
+                onclick="ShowContent('category-content')"
+                onmouseover="over(this);"onmouseout="out(this);"
+                onmousedown="down(this);"onmouseup="up(this);">
+              <img src="road-cone.png" width="30" height="30"> 案件類別統計</div>
+
+              <div class="title_name" 
+                onclick="ShowContent('month-content')"
+                onmouseover="over(this);"onmouseout="out(this);"
+                onmousedown="down(this);"onmouseup="up(this);">
+              <img src="calendar-three.png" width="30" height="30"> 月份趨勢</div>
+        </div>
+    </head>
+
+     <body>
+      <script src="show_pic.js"></script>
+        <div class="body_street_img">
+            <div class="text_overlay">DATA. ANALYSIS</div>
+        </div>
+
+        <div class="body_motivation_flex">     
+               <div class="motivation_left_img">
+                  <div class="motivation_text">
+                  本專題研究著眼於台南市交通事故>之分析與預測，藉由從多個面向進行深入探討，以期達到多方面的目標。
+                  <br>
+                  首先，我們關注於交通安全的優化，透過分析事故資料，識別高風險地區、時段和因素，有助於精準制定交通安全政策與預防措施，進而減少事故發生，提升市民的交通安全感。
+                  <br>
+                  其次，我們專注於資源分配與規劃，透過深入瞭解事故的地點、類型以及受傷程度，有效整合資源，優化道路建設和改善計劃，從而減少交通壅塞和事故風險，提升城市交通效能。
+                  <br>
+                  最後，我們強調公民意識的提升，透過清晰的數據分析和預測結果，提高市民對交通安全的認識和警覺，鼓勵遵守交通守則，從而培養健康的交通行為習慣，共同創建更安全、更有秩序的交通環境。
+                  <br>
+                  <br>這些努力將有助於促進城市的可持續發展，改善交通環境，並提升市民的生活品質。
+                  </div> 
+               </div>     
+              <div class="motivation_right_img">
+                <div class="motivation_text_overlay">Better LIfe.</div>
+              </div>
+        </div>
+
+        <div class="data_pic_flex">
+            <table>
+              <div class="pic_container">
+                <tr>
+                    <td>
+                      <img class="content-block" src="限速與受傷人數關聯散佈圖.png" id="speed-content" style="display: none">
+                       <div class="pic_motivation_text" style="display: none">透過這個圖表，我們可以探討不同速限下交通事故對受傷人數的影響，幫助制定更有效的交通安全政策。</div>
+                    </td>
+                    <td>
+                      <img class="content-block" src="案件類別統計.png" id="category-content" style="display: none">
+                       <div class="pic_motivation_text" style="display: none">這個圖表呈現了不同類型交通事故的統計資料，協助分析主要事故類別，以引導相應的安全措施。</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                      <img class="content-block" src="地理類型名稱與受傷人數關聯長條圖.png" id="place-content" style="display: none" >
+                       <div class="pic_motivation_text" style="display: none">這個圖表將地理類型與受傷人數關聯起來，揭示不同地點環境對交通事故風險的影響。</div>
+                    </div>
+                    </td>
+                    <td>
+                      <img class="content-block" src="不同天氣下的案件數量.png" id="weather-content" style="display: none">
+                       <div class="pic_motivation_text" style="display: none">這個圖表可以展示不同天氣條件下交通事故的分布，幫助識別在不同天氣情況下的交通安全風險。</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                      <img class="content-block" src="111年台南市交通事故受傷人數趨勢(月份).png" id="month-content" style="display: none">
+                       <div class="pic_motivation_text" style="display: none">透過折線圖揭示每月交通事故受傷人數變化，助於發現季節性趨勢及熱點。</div>
+                    </td>
+                </tr>
+              </div>
+            </table>
+        </div>
+        <div>
+          <h3></h3>
+        </div>
+     </body>
+</HTML>
+
